@@ -1,16 +1,15 @@
-## Hi there 👋
+```
+th3-arch1tect
+```
 
-<!--
-**th3-arch1tect/th3-arch1tect** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I build infrastructure that doesn't break when I'm not looking.  
+Self-hosted everything. Proxmox homelab. Full TUI workflow. Moving into cybersecurity.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+> Arch Linux · Proxmox VE · Neovim · tmux · chezmoi  
+> Wireguard · Tailscale · Pi-hole · Nginx · Gitea
+
+---
+
+Currently: eJPT prep · Omnipresence homelab · looking for junior cybersec roles in Buenos Aires
