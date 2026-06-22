@@ -7,9 +7,18 @@ Self-hosted everything. Proxmox homelab. Full TUI workflow. Moving into cybersec
 
 ---
 
-> Arch Linux · Proxmox VE · Neovim · tmux · chezmoi  
-> Wireguard · Tailscale · Pi-hole · Nginx · Gitea
+Arch Linux · Proxmox VE · Neovim · tmux · chezmoi
 
+Tailscale · Pi-hole · Nginx · Gitea · Ansible
+
+> Premiere Pro · FL Studio · OBS
+
+
+Currently: eJPT prep · HTB Starting Point · Omnipresence homelab
+Open to junior DevSecOps / cybersec roles · Buenos Aires
+
+📺 YouTube → th3-arch1tect
 ---
 
-Currently: eJPT prep · Omnipresence homelab · looking for junior cybersec roles in Buenos Aires
+
+
