@@ -23,7 +23,7 @@ Open to junior DevSecOps / cybersec roles · Buenos Aires
 
 📺 YouTube → th3-arch1tect
 
-🎮 Building: Tamara (2D platformer, Godot 4)
+🎮 Building: Problems Surfer (2D platformer, Godot 4)
 
 ---
 
