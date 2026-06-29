@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>th3-arch1tect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:         #0c0c0c;
+      --surface:    #131313;
+      --border:     #1f1f1f;
+      --text:       #dcdcdc;
+      --muted:      #555;
+      --accent:     #7ec8a0;
+      --accent-dim: #3d6e52;
+      --font:       'JetBrains Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); font-size: 14px; line-height: 1.75; min-height: 100vh; }
+    .container { max-width: 680px; margin: 0 auto; padding: 80px 24px 120px; }
+
+    /* prompt block — flujo de texto natural */
+    .prompt-block {
+      min-height: 5rem; /* Usamos min-height para que crezca hacia abajo si salta de línea en el celular */
+      font-size: 13px;
+      line-height: 1.6;
+      word-break: break-all; /* CLAVE: Si llega al borde de la pantalla, corta la palabra y baja, igual que una terminal */
+    }
+
+    .prompt-static { color: var(--muted); }
+    .prompt-user   { color: var(--accent); }
+    .prompt-dir    { color: #6b9fd4; }
+    .typewriter-line { color: var(--text); }
+
+    /* Cursor perfecto imitando el guion bajo en la base */
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 1px;
+      background: var(--accent);
+      margin-left: 1px;
+      vertical-align: baseline; 
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    .hero { margin-bottom: 72px; }
+    .hero-name { font-size: clamp(28px, 6vw, 42px); font-weight: 700; color: var(--text); letter-spacing: -0.02em; line-height: 1.1; margin-top: 0px; margin-bottom: 16px; }
+    .hero-name span { color: var(--accent); }
+    .status { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); margin-top: 24px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .label { font-size: 11px; font-weight: 500; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; }
+    .about p { color: #aaa; font-size: 14px; line-height: 1.8; margin-bottom: 12px; }
+    .stack-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: var(--surface); border: 1px solid var(--border); color: #aaa; font-size: 12px; padding: 4px 10px; border-radius: 2px; transition: border-color 0.15s, color 0.15s; }
+    .tag:hover { border-color: var(--accent-dim); color: var(--accent); }
+    .project-list { list-style: none; }
+    .project-list li { border-left: 2px solid var(--border); padding: 14px 0 14px 20px; transition: border-color 0.15s; margin-top: 4px; cursor: pointer; }
+    .project-list li:hover { border-color: var(--accent-dim); }
+    .project-body { overflow: hidden; transition: max-height 0.3s ease; max-height: 0; }
+    .project-name { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .project-name:hover { color: var(--accent); }
+    .project-desc { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .project-tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .project-tag { font-size: 11px; color: var(--accent-dim); border: 1px solid var(--accent-dim); padding: 2px 7px; border-radius: 2px; }
+    .links-list { list-style: none; }
+    .links-list li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .link-icon { color: var(--muted); font-size: 12px; width: 24px; text-align: center; }
+    .links-list a { color: #aaa; text-decoration: none; font-size: 13px; }
+    .links-list a:hover { color: var(--accent); }
+    .link-note { font-size: 11px; color: var(--muted); margin-left: auto; }
+    .footer { margin-top: 80px; font-size: 12px; color: var(--muted); }
+    .footer span { color: var(--accent); }
+  </style>
+</head>
+<body>
+<div class="container">
+  <section class="hero">
+
+    <div class="prompt-block">
+      <span class="prompt-static"><span class="prompt-user">th3-arch1tect</span><span>@</span><span class="prompt-dir">portfolio</span><span>:~$&nbsp;</span></span><span class="typewriter-line" id="typewriter-line"><span id="typewriter"></span><span class="cursor"></span></span>
+    </div>
+
+    <h1 class="hero-name">I build things that<br /><span>don't break</span><br />when I'm not looking.</h1>
+    <div class="status"><span class="dot"></span>open to junior DevSecOps / cybersec roles · Buenos Aires</div>
+
+  </section>
+
+  <hr class="divider" />
+
+  <section class="about">
+    <p class="label">// about</p>
+    <p>Self-taught infrastructure engineer and technologist based in Buenos Aires. I document everything — friction logs, runbooks, physical inventories — because infrastructure should be reproducible by someone who wasn't there when it was built.</p>
+    <p>Moving into cybersecurity through HTB and eJPT. Background in video editing, audio production, and a deep obsession with terminal workflows and minimum-resource setups.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <p class="label">// stack</p>
+    <div class="stack-grid">
+      <span class="tag">Arch Linux</span><span class="tag">Proxmox VE</span><span class="tag">Ansible</span><span class="tag">Tailscale</span>
+      <span class="tag">Neovim</span><span class="tag">tmux</span><span class="tag">chezmoi</span><span class="tag">Gitea</span>
+      <span class="tag">Nginx</span><span class="tag">Pi-hole</span><span class="tag">Kali Linux</span><span class="tag">Premiere Pro</span>
+      <span class="tag">FL Studio</span><span class="tag">OBS</span>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <p class="label">// projects</p>
+    <ul class="project-list">
+      <li>
+        <a class="project-name" href="https://github.com/th3-arch1tect/infrastructure" target="_blank">infrastructure</a>
+        <div class="project-body">
+          <p class="project-desc">Proxmox homelab with LXC containers, Tailscale mesh networking, and Ansible automation. Provisioned idempotently from a single playbook.</p>
+          <div class="project-tags"><span class="project-tag">Ansible</span><span class="project-tag">Proxmox</span><span class="project-tag">Tailscale</span></div>
+        </div>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/th3-arch1tect/dotfiles" target="_blank">dotfiles</a>
+        <div class="project-body">
+          <p class="project-desc">Full TUI environment managed with chezmoi. Hyprland, Neovim, tmux, and shell configs synced across Garuda Linux, Termux, and servers.</p>
+          <div class="project-tags"><span class="project-tag">chezmoi</span><span class="project-tag">Hyprland</span><span class="project-tag">Neovim</span></div>
+        </div>
+      </li>
+      <li>
+        <a class="project-name" href="https://github.com/th3-arch1tect/docs" target="_blank">docs</a>
+        <div class="project-body">
+          <p class="project-desc">Infrastructure as a documented product. Friction logs, runbooks, physical inventory with keep/sell/gift tags. Git history as the audit trail.</p>
+          <div class="project-tags"><span class="project-tag">documentation</span><span class="project-tag">runbooks</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="color: var(--muted); cursor: default;">arduino-cli-workflow</span>
+          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">coming soon</span>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Full CLI workflow for Arduino development. Compile, upload, and desktop notifications without touching an IDE.</p>
+          <div class="project-tags"><span class="project-tag">arduino-cli</span><span class="project-tag">fish</span><span class="project-tag">bash</span></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <hr class="divider" />
+
+  <section>
+    <p class="label">// find me</p>
+    <ul class="links-list">
+      <li><span class="link-icon">gh</span><a href="https://github.com/th3-arch1tect" target="_blank">github.com/th3-arch1tect</a></li>
+      <li><span class="link-icon">yt</span><a href="https://youtube.com/@th3-arch1tect" target="_blank">youtube.com/@th3-arch1tect</a> <span class="link-note">coming soon</span></li>
+      <li><span class="link-icon">in</span><a href="https://linkedin.com/in/fernando-caceresd" target="_blank">linkedin.com/in/fernando-caceresd</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>built with <span>html + css + js</span> · hosted on github pages</p>
+  </footer>
+</div>
+
+<script>
+  (function(){
+
+    var phrases = [
+      'cat about.md',
+      'ansible-playbook site.yml',
+      'ssh homelab',
+      'nvim friction-log.md'
+    ];
+    var el = document.getElementById('typewriter');
+    var pIdx = 0, cIdx = 0, del = false, paused = false;
+
+    function tick(){
+      if(paused) return;
+      var curr = phrases[pIdx];
+      if(!del){
+        cIdx++;
+        el.textContent = curr.slice(0, cIdx);
+        if(cIdx >= curr.length){
+          paused = true;
+          setTimeout(function(){ del = true; paused = false; tick(); }, 1800);
+        } else {
+          setTimeout(tick, 75);
+        }
+      } else {
+        cIdx--;
+        el.textContent = curr.slice(0, cIdx);
+        if(cIdx === 0){
+          del = false;
+          pIdx = (pIdx + 1) % phrases.length;
+          setTimeout(tick, 200);
+        } else {
+          setTimeout(tick, 35);
+        }
+      }
+    }
+    setTimeout(tick, 600);
+
+    document.querySelectorAll('.project-list li').forEach(function(li){
+      var body = li.querySelector('.project-body');
+      li.addEventListener('click', function(e){
+        if(e.target.tagName === 'A') return;
+        if(body.style.maxHeight === '0px' || body.style.maxHeight === ''){
+          body.style.maxHeight = body.scrollHeight + 'px';
+        } else {
+          body.style.maxHeight = '0px';
+        }
+      });
+    });
+
+  })();
+</script>
+</body>
+</html>
