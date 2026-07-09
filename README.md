@@ -7,17 +7,17 @@ Self-hosted everything. Proxmox homelab. Full TUI workflow. Moving into cybersec
 
 ---
 
-Arch Linux · Proxmox VE · Neovim · tmux · chezmoi
+Arch Linux · Proxmox VE · Rocky Linux · Kali Linux · Neovim · tmux · chezmoi
 
-Tailscale · Pi-hole · Nginx · Gitea · Ansible
+Tailscale · Pi-hole · Nginx · Gitea · Ansible · Jellyfin · MariaDB
 
-Premiere Pro · FL Studio · OBS
+Bash · Godot · Premiere Pro · Kdenlive · FL Studio · Bitwig Studio · OBS
 
 ---
 
-Currently: eJPT prep · HTB Starting Point · homelab-as-portfolio
-Open to junior DevSecOps / cybersec roles · Buenos Aires
+Currently: Optimizing multi-device workflows (Project Omnipresence) · eJPT prep · HTB Starting Point · GPU passthrough RTX 2060 (WIP) · remote workstation via Tailscale + Sunshine/Moonlight
 
+Open to junior DevSecOps / tech support / cybersec roles · Buenos Aires
 
 ---
 
