@@ -7,7 +7,7 @@ Self-hosted everything. Proxmox homelab. Full TUI workflow. Moving into cybersec
 
 ---
 
-Arch Linux · Proxmox VE · Rocky Linux · Kali Linux · Neovim · tmux · chezmoi
+Arch Linux · Proxmox VE · Rocky Linux · Kali Linux · Neovim · Tmux · Zellij · Chezmoi
 
 Tailscale · Pi-hole · Nginx · Gitea · Ansible · Jellyfin · MariaDB
 
