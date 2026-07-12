@@ -28,6 +28,7 @@ Open to junior DevOps / DevSecOps / tech support roles · Buenos Aires · Workin
 ---
 
 📺 YouTube → th3-arch1tect
+
 🎮 Building: Problems Surfer (2D platformer, Godot 4)
 
 ---
