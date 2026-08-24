@@ -97,7 +97,7 @@
   <section class="about">
     <p class="label">// about</p>
     <p>Self-taught infrastructure engineer and technologist based in Buenos Aires. I document everything — friction logs, runbooks, physical inventories — because infrastructure should be reproducible by someone who wasn't there when it was built.</p>
-    <p>Moving into cybersecurity through HTB and eJPT. Background in video editing, audio production, and a deep obsession with terminal workflows, instant zero-latency responsiveness and minimum-resource setups.</p>
+    <p>Moving into cybersecurity through HTB, with eJPT as a future certification target. Background in video editing, audio production, and a deep obsession with terminal workflows, instant zero-latency responsiveness and minimum-resource setups.</p>
   </section>
 
   <hr class="divider" />
@@ -105,7 +105,7 @@
   <section>
     <p class="label">// stack</p>
     <div class="stack-grid">
-      <span class="tag">Arch Linux</span><span class="tag">Proxmox VE</span><span class="tag">Ansible</span><span class="tag">Tailscale</span>
+      <span class="tag">Arch Linux</span><span class="tag">NixOS</span><span class="tag">Proxmox VE</span><span class="tag">Ansible</span><span class="tag">Tailscale</span>
       <span class="tag">Neovim</span><span class="tag">tmux</span><span class="tag">chezmoi</span><span class="tag">Gitea</span>
       <span class="tag">Nginx</span><span class="tag">Pi-hole</span><span class="tag">Kali Linux</span><span class="tag">Premiere Pro</span>
       <span class="tag">FL Studio</span><span class="tag">OBS</span>
@@ -118,21 +118,40 @@
     <p class="label">// projects</p>
     <ul class="project-list">
       <li>
-        <a class="project-name" href="https://github.com/th3-arch1tect/infrastructure" target="_blank">infrastructure</a>
+        <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>infrastructure</span>
+          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+        </div>
         <div class="project-body">
-          <p class="project-desc">Proxmox homelab with LXC containers, Tailscale mesh networking, and Ansible automation. Provisioned idempotently from a single playbook.</p>
-          <div class="project-tags"><span class="project-tag">Ansible</span><span class="project-tag">Proxmox</span><span class="project-tag">Tailscale</span></div>
+          <p class="project-desc">Proxmox homelab with LXC containers, Tailscale mesh networking, and Ansible automation. Provisioned idempotently from a single playbook. Includes a Tasmota-flashed smart plug for remote hard power-cycling when SSH/WoL can't reach a hung node — a DIY equivalent of iDRAC/IPMI, reached over Tailscale.</p>
+          <div class="project-tags"><span class="project-tag">Ansible</span><span class="project-tag">Proxmox</span><span class="project-tag">Tailscale</span><span class="project-tag">Tasmota</span></div>
         </div>
       </li>
       <li>
-        <a class="project-name" href="https://github.com/th3-arch1tect/dotfiles" target="_blank">dotfiles</a>
+        <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>dotfiles</span>
+          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+        </div>
         <div class="project-body">
-          <p class="project-desc">Full TUI environment managed with chezmoi. Hyprland, Neovim, tmux, and shell configs synced across Garuda Linux, Termux, and servers.</p>
-          <div class="project-tags"><span class="project-tag">chezmoi</span><span class="project-tag">Hyprland</span><span class="project-tag">Neovim</span></div>
+          <p class="project-desc">Full TUI environment managed with chezmoi. Neovim, tmux, and shell configs synced across Linux, Windows, and Termux.</p>
+          <div class="project-tags"><span class="project-tag">chezmoi</span><span class="project-tag">Neovim</span><span class="project-tag">tmux</span></div>
         </div>
       </li>
       <li>
-        <a class="project-name" href="https://github.com/th3-arch1tect/docs" target="_blank">docs</a>
+        <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>nixos-dotfiles</span>
+          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Fully declarative NixOS environment — flakes, Home Manager, sops-nix for secrets. Reproduces the entire desktop from a single config.</p>
+          <div class="project-tags"><span class="project-tag">NixOS</span><span class="project-tag">Home Manager</span><span class="project-tag">sops-nix</span></div>
+        </div>
+      </li>
+      <li>
+        <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>docs</span>
+          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+        </div>
         <div class="project-body">
           <p class="project-desc">Infrastructure as a documented product. Friction logs, runbooks, physical inventory with keep/sell/gift tags. Git history as the audit trail.</p>
           <div class="project-tags"><span class="project-tag">documentation</span><span class="project-tag">runbooks</span></div>
