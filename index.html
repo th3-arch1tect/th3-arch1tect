@@ -75,6 +75,8 @@
     .links-list a { color: #aaa; text-decoration: none; font-size: 13px; }
     .links-list a:hover { color: var(--accent); }
     .link-note { font-size: 11px; color: var(--muted); margin-left: auto; }
+    .repo-link-btn { font-size: 10px; border: 1px solid var(--border); padding: 1px 7px; border-radius: 2px; color: var(--muted); cursor: not-allowed; text-decoration: none; background: transparent; }
+    .badge-group { display: flex; align-items: center; gap: 6px; }
     .footer { margin-top: 80px; font-size: 12px; color: var(--muted); }
     .footer span { color: var(--accent); }
   </style>
@@ -120,7 +122,10 @@
       <li>
         <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
           <span>infrastructure</span>
-          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+          <span class="badge-group">
+            <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+            <a class="repo-link-btn" href="#" onclick="return false;" title="Not yet available">link to repo</a>
+          </span>
         </div>
         <div class="project-body">
           <p class="project-desc">Proxmox homelab with LXC containers, Tailscale mesh networking, and Ansible automation. Provisioned idempotently from a single playbook. Includes a Tasmota-flashed smart plug for remote hard power-cycling when SSH/WoL can't reach a hung node — a DIY equivalent of iDRAC/IPMI, reached over Tailscale.</p>
@@ -130,7 +135,10 @@
       <li>
         <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
           <span>dotfiles</span>
-          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+          <span class="badge-group">
+            <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+            <a class="repo-link-btn" href="#" onclick="return false;" title="Not yet available">link to repo</a>
+          </span>
         </div>
         <div class="project-body">
           <p class="project-desc">Full TUI environment managed with chezmoi. Neovim, tmux, and shell configs synced across Linux, Windows, and Termux.</p>
@@ -140,7 +148,10 @@
       <li>
         <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
           <span>nixos-dotfiles</span>
-          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+          <span class="badge-group">
+            <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+            <a class="repo-link-btn" href="#" onclick="return false;" title="Not yet available">link to repo</a>
+          </span>
         </div>
         <div class="project-body">
           <p class="project-desc">Fully declarative NixOS environment — flakes, Home Manager, sops-nix for secrets. Reproduces the entire desktop from a single config.</p>
@@ -150,7 +161,10 @@
       <li>
         <div class="project-name" style="display: flex; justify-content: space-between; align-items: center;">
           <span>docs</span>
-          <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+          <span class="badge-group">
+            <span style="font-size: 10px; border: 1px solid var(--muted); padding: 1px 5px; border-radius: 2px; color: var(--muted);">private</span>
+            <a class="repo-link-btn" href="#" onclick="return false;" title="Not yet available">link to repo</a>
+          </span>
         </div>
         <div class="project-body">
           <p class="project-desc">Infrastructure as a documented product. Friction logs, runbooks, physical inventory with keep/sell/gift tags. Git history as the audit trail.</p>
